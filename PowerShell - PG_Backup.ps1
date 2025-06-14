@@ -1,4 +1,4 @@
-# -NoProfile -ExecutionPolicy Unrestricted -NonInteractive -File "D:\DEVELOPMENT BACKUPS\PowerShell - PG_Backup.ps1"
+﻿# -NoProfile -ExecutionPolicy Unrestricted -NonInteractive -File "D:\DEVELOPMENT BACKUPS\PowerShell - PG_Backup.ps1"
 
 # Set the password for PostgreSQL
 $env:PGPASSWORD = "50d3x0"
@@ -30,7 +30,7 @@ $databases = @("TRACZO_TAWAM", "TRACZO_Integration", "icegen_logger")
 # Loop through each database and run pg_dump
 foreach ($dbname in $databases) {
     # Define the backup file path for each database
-    $backupFilePath = "$backupFolder\$dbname" + "_$dateTime.backup"
+    $backupFilePath = "$backupFolder\$dbname" + ".backup"
 
     # Run the pg_dump command
     Write-Host "Backing up database: $dbname"
